@@ -1,0 +1,73 @@
+local screenGui = Instance.new("ScreenGui")
+screenGui.Name = "bgwreunpiasg2795"
+screenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+local pl = game.Players.LocalPlayer.Character.HumanoidRootPart
+local humanoid = game.Players.LocalPlayer.Character.Humanoid
+
+local function createButton(name, position, action)
+    local button = Instance.new("TextButton")
+    button.Name = name
+    button.Size = UDim2.new(0, 200, 0, 50)
+    button.Position = position
+    button.Text = name
+    button.Parent = screenGui
+
+    button.MouseButton1Click:Connect(action)
+end
+
+local function action1()
+    humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+    wait(0.1)
+    pl.CFrame = CFrame.new(31.8, 25.4, 165)
+end
+
+local function action2()
+    humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+    wait(0.1)
+    pl.CFrame = CFrame.new(-13.2, 25.4, 165)
+end
+
+local function action3()
+    humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+    wait(0.1)
+    pl.CFrame = CFrame.new(187.2, 25.5, -26.6)
+end
+
+local function action4()
+    humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+    wait(0.1)
+    pl.CFrame = CFrame.new(192.3, 25.5, 9)
+end
+
+local function action5()
+    humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+    wait(0.1)
+    pl.CFrame = CFrame.new(65.2 25.5 -210.2)
+end
+
+local function action6()
+    humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+    wait(0.1)
+    pl.CFrame = CFrame.new(-19 25.5 -210.2)
+end
+
+local function action7()
+    humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+    wait(0.1)
+    pl.CFrame = CFrame.new(-170 25.5 14.5)
+end
+
+local function action8()
+    humanoid:ChangeState(Enum.HumanoidStateType.Jumping)
+    wait(0.1)
+    pl.CFrame = CFrame.new(-170 25.5 -24)
+end
+
+createButton("Purple LEFT", UDim2.new(0.1, 0, 0.1, 0), action1)
+createButton("Purple RIGHT", UDim2.new(0.1, 0, 0.2, 0), action2)
+createButton("Red LEFT", UDim2.new(0.1, 0, 0.3, 0), action3)
+createButton("Red RIGHT", UDim2.new(0.1, 0, 0.4, 0), action4)
+createButton("Blue LEFT", UDim2.new(0.1, 0, 0.5, 0), action5)
+createButton("Blue RIGHT", UDim2.new(0.1, 0, 0.6, 0), action6)
+createButton("Green LEFT", UDim2.new(0.1, 0, 0.7, 0), action7)
+createButton("Green RIGHT", UDim2.new(0.1, 0, 0.8, 0), action8)
